@@ -8,24 +8,27 @@ namespace UPG2
         {
             Console.WriteLine("Skriv in din mening:");
             string mening = Console.ReadLine();
-            string[] meningLista = mening.Split(' '); //Skapa array av s, innehåller ord för ord
+            string[] ord = mening.Split(' '); //Skapa array av s, innehåller ord för ord
 
-
-            //Jag vet inte hur jag ska klara uppgiften med att sortera arrayen utan Array.sort()!
-            //Nedan är mitt försök men det kastar bara om orden och jämför dom en och en.
-            /*for (int i = 0; i < meningLista.Length - 1; i++) 
+            //For satsen nedan sorterar listan i fallande ordning (Störst till minst)
+            for (int i = 0; i < ord.Length - 1; i++) 
             {
-                if (meningLista[i].Length < meningLista[i + 1].Length)
+                if (ord[i].Length < ord[i + 1].Length)
                 {
-                    string temp = meningLista[i];
-                    meningLista[i] = meningLista[i + 1];
-                    meningLista[i + 1] = temp;
+                    string temp = ord[i];
+                    ord[i] = ord[i + 1];
+                    ord[i + 1] = temp;
+
+                    i = -1;
                 }
             }
-            foreach (string ord in meningLista)
+            foreach (string i in ord)
             {
-                Console.WriteLine(ord);
-            }*/
+                Console.WriteLine(i);
+            }
+
+
+
         }
     }
 }

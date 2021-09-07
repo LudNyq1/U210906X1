@@ -6,7 +6,10 @@ namespace UPG3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Mata in mening:");
+            string mening = Console.ReadLine();
+            string[] ord = mening.Split();
+            
         }
     }
 }
