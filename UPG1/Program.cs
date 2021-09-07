@@ -13,7 +13,7 @@ namespace UPG1
             Console.WriteLine("Din mening innehåller: " + meningArray.Length + " ord");     //Skriver ut antal ord som är lagrat i Arrayebn
             for (int i = 0; i < meningArray.Length; i++)    //För varje ord loopas for-iterationen och skriver ut antal bokstäver
             {
-
+                //Bla bla bla
                 Console.WriteLine(meningArray[i] + " har " + meningArray[i].Length + " bokstäver!");
             }
 
