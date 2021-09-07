@@ -16,7 +16,7 @@ namespace UPG1
                 //Bla bla bla
                 Console.WriteLine(meningArray[i] + " har " + meningArray[i].Length + " bokstäver!");
             }
-
+            
             Console.ReadLine();
         }
     }

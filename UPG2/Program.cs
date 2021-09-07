@@ -6,7 +6,9 @@ namespace UPG2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Skriv in din mening:");
+            string s = Console.ReadLine();
+            string[] sArr = s.Split(' '); //Skapa array av s, innehåller ord för ord
         }
     }
 }
