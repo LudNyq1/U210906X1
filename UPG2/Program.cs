@@ -12,7 +12,7 @@ namespace UPG2
 
             //For satsen nedan sorterar ord-listan i fallande ordning (Störst till minst)
             Console.WriteLine("Orden i fallande ordning: ");
-            for (int i = 0; i < ord.Length - 1; i++) 
+            for (int i = 0; i < ord.Length - 1; i++)
             {
                 if (ord[i].Length < ord[i + 1].Length)
                 {
