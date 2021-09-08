@@ -9,34 +9,47 @@ namespace UPG3
             
             Console.WriteLine("Mata in mening:");
             string mening = Console.ReadLine();
-            string[] ord = mening.Split();
+            string[] ord = mening.Split(' ');
 
-            string[] ordUnika = new string[999]; //Här läggs alla unika ord in varteftersom
-            string ordUnikaString = string.Join(" ", ordUnika);
+            string[] ordUnika = new string[]; //Här läggs alla unika ord in varteftersom
+            //string ordUnikaString = string.Join(" ", ordUnika);
             int[] ordUnikaAntal = new int[999]; //Platserna i denna array är paralella med ord1
             for(int i = 0; i < ord.Length - 1; i++)
             {
+                Console.WriteLine("For i");
+                string ordUnikaString = string.Join(" ", ordUnika);
                 int counter = 1;
                 if (ord[i].Contains(ordUnikaString) == false) //Vill kolla att om if-statement är false så ska den fortsätta
                 {
-                    for(int j = 1; j < ord.Length; j++)
+                    
+
+                    for (int j = 1; j < ord.Length; j++)
                     {
+                        Console.WriteLine("For j");
                         /*Nedan kollar först om ord[i] är lika med ord[j] och sedan om ord[i]
                         redan finns i ordUnikaString(om ord[i] ej redan finns där aka == false
                         kommer den att fortsätta med statementet)*/
-                        if(string.Equals(ord[i], ord[j], StringComparison.OrdinalIgnoreCase) == true & ord[i].Contains(ordUnikaString) == false)
+                        if (string.Equals(ord[i], ord[j]) == true /*& ord[i].Contains(ordUnikaString) == false*/)
                         {
-                            if(.)
-                                //ord[i].CompareTo(ordUnikaString) = false
-                            {
-
-                            }
-                        
+                            ordUnika[i] = ord[i];
                             counter++;
                         }
                     }
-                }
+
+                    ordUnikaAntal[i] = counter;
+                }   
+                    
+
             }
+
+            Console.WriteLine("Loop klar\n");
+            
+            foreach(string ord1 in ordUnika)
+            {
+                Console.WriteLine(ord1);
+                Console.WriteLine("1");
+            }
+
 
             //Kommentaren nedan kommer att vara true, "StringComparisona.OrdinalIgnoreCase" betyder att Equals klassen
             //ska ignorera stora och små bokstäver!
