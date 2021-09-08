@@ -27,7 +27,7 @@ namespace UPG7
             for (int i = 0; i < meningStringArray.Length; i++) // Kollar vilka platser i alphabet
                                                                // som motsvarar bokstäverna i meningStringArray,
                                                                // eftersom poisition 0 motsvarar a och 4 i både alphabetet och leetSpeak
-                                                               // är listorna "paralella"
+                                                               // är listorna "parallella"
             {
                 meningLeet += leetSpeakArray[Array.IndexOf(alphabetArray, meningStringArray[i])];
             }
