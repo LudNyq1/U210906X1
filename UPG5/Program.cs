@@ -13,7 +13,7 @@ namespace UPG5
             {
                 string s = Console.ReadLine();
 
-                if (s != "AVSLUTA")
+                if (s != "AVSLUTA") //Sålänge string s inte är lika med avsluta är a = true, annats a = false och while loopen bryts.
                 {
                     mening += (s + " ");
                 }
