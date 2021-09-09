@@ -14,10 +14,10 @@ namespace UPG3
             foreach(string s in mening)
             {
                 
-                if (Array.IndexOf(unikaOrd, s) == -1) //Om ordet s inte finns i unikaOrd, genomförs if satsen.
+                if (Array.IndexOf(unikaOrd1, s) == -1) //Om ordet s inte finns i unikaOrd, genomförs if satsen.
                                                       //Array.IndexOf() retunerar värdet -1 om den börjar söra på pos[0] men ej hittar värdet
                 {
-                    unikaOrd[ctr1] = mening[Array.IndexOf(mening, s)]; //Hittar värdet på stringen s och sätter in det i unikaOrd
+                    unikaOrd1[ctr1] = mening[Array.IndexOf(mening, s)]; //Hittar värdet på stringen s och sätter in det i unikaOrd
                     ctr1++;
                 }
                 
@@ -26,7 +26,7 @@ namespace UPG3
             int ctr2 = 0;
             for (int i = 0; i < unikaOrd1.Length; i++) //Ser hur många platser som är fyllda i unikaOrd
             {
-                if (unikaOrd1[i] != "")
+                if (unikaOrd1[i] != null)
                 {
                     ctr2++;
                 }
@@ -34,23 +34,35 @@ namespace UPG3
 
             string[] unikaOrd2 = new string[ctr2];
 
-            for (int i = 0; i < unikaOrd1.Length; i++) //Ser hur många platser som är fyllda i unikaOrd
+            for (int i = 0; i < ctr2; i++) //Ser hur många platser som är fyllda i unikaOrd
             {
-                if (unikaOrd1[i] != "") //Om unikaOrd1[i] är en tom plats genomförs ej if-satsen, orden tilldelas ej till arrayen unikaOrd2
-                                       
+                unikaOrd2[i] = unikaOrd1[i];
+            }
+
+            int[] unikaOrdAntal = new int[unikaOrd2.Length];
+            for (int i = 0; i < unikaOrd2.Length; i++)
+            {
+                int ctr = 0;
+                for (int j = 0; j < mening.Length; j++)
                 {
-                    unikaOrd2[i] = unikaOrd1[i];
+                    if(unikaOrd2[i] == mening[j])
+                    {
+                        ctr++;
+                    }
                 }
+                unikaOrdAntal[i] = ctr;
             }
 
-
-
-
-
-            foreach (string i in unikaOrd2)
+            foreach ( item in collection)
             {
-                Console.WriteLine(i);
+
             }
+
+            for(int i = 0; i < unikaOrd2.Length; i++)
+            {
+                Console.WriteLine(unikaOrd2[i] + " " + unikaOrdAntal[i]);
+            }
+            
             /*
             string[] s = { "jag", "cool", "ludvig", "ball", "koolalkalkalkalka"};
             Console.WriteLine(Array.IndexOf(s, "jagg")); //Om objektet inte finns i arrayen returnar den det sista 
